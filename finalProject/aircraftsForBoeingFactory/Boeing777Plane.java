@@ -16,41 +16,41 @@ public class Boeing777Plane implements Plane {
     private static Integer FlyingRange;
     private static Integer WeightLift;
 
-        static {
+    static {
 
-            try {
-                InitialValuesParser initialValuesParser = new InitialValuesParser();
-                for (Object o : initialValuesParser.boeing777InitialValues().entrySet()) {
-                    Map.Entry entry = (Map.Entry) o;
-                    if (entry.getKey().toString().equalsIgnoreCase("aircraftType")){
-                        AircraftType = entry.getValue().toString();
-                    }
-                    if (entry.getKey().toString().equalsIgnoreCase("vendorName")){
-                        VendorName = entry.getValue().toString();
-                    }
-                    if (entry.getKey().toString().equalsIgnoreCase("planeName")) {
-                        PlaneName = entry.getValue().toString();
-                    }
-                    if (entry.getKey().toString().equalsIgnoreCase("planeType")){
-                        PlaneType = entry.getValue().toString();
-                    }
-                    if (entry.getKey().toString().equalsIgnoreCase("FuelEndurance")){
-                        FuelEndurance = Integer.parseInt(entry.getValue().toString());
-                    }
-                    if (entry.getKey().toString().equalsIgnoreCase("SeatingCapacity")){
-                        SeatingCapacity = Integer.parseInt(entry.getValue().toString());
-                    }
-                    if (entry.getKey().toString().equalsIgnoreCase("FlyingRange")){
-                        FlyingRange = Integer.parseInt(entry.getValue().toString());
-                    }
-                    if (entry.getKey().toString().equalsIgnoreCase("WeightLift")){
-                        WeightLift = Integer.parseInt(entry.getValue().toString());
-                    }
+        try {
+            InitialValuesParser initialValuesParser = new InitialValuesParser();
+            for (Object o : initialValuesParser.boeing777InitialValues().entrySet()) {
+                Map.Entry entry = (Map.Entry) o;
+                if (entry.getKey().toString().equalsIgnoreCase("aircraftType")){
+                    AircraftType = entry.getValue().toString();
                 }
-            } catch (Exception e) {
-                System.err.println("[ERROR]:");
+                if (entry.getKey().toString().equalsIgnoreCase("vendorName")){
+                    VendorName = entry.getValue().toString();
+                }
+                if (entry.getKey().toString().equalsIgnoreCase("planeName")) {
+                    PlaneName = entry.getValue().toString();
+                }
+                if (entry.getKey().toString().equalsIgnoreCase("planeType")){
+                    PlaneType = entry.getValue().toString();
+                }
+                if (entry.getKey().toString().equalsIgnoreCase("FuelEndurance")){
+                    FuelEndurance = Integer.parseInt(entry.getValue().toString());
+                }
+                if (entry.getKey().toString().equalsIgnoreCase("SeatingCapacity")){
+                    SeatingCapacity = Integer.parseInt(entry.getValue().toString());
+                }
+                if (entry.getKey().toString().equalsIgnoreCase("FlyingRange")){
+                    FlyingRange = Integer.parseInt(entry.getValue().toString());
+                }
+                if (entry.getKey().toString().equalsIgnoreCase("WeightLift")){
+                    WeightLift = Integer.parseInt(entry.getValue().toString());
+                }
             }
+        } catch (Exception e) {
+            System.err.println("[ERROR]:");
         }
+    }
 
     public String getAircraftType(){
         return AircraftType;

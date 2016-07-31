@@ -75,4 +75,3 @@ public class SikorskyS_52Plane implements Plane {
         return SeatingCapacity;
     };
 }
-

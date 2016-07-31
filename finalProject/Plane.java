@@ -1,6 +1,6 @@
 package com.goit.finalProject;
 
 public interface Plane extends Aircraft  {
-    Integer  getFlyingRange();
-    String getPlaneType();
+        Integer getFlyingRange ();
+        String getPlaneType ();
 }

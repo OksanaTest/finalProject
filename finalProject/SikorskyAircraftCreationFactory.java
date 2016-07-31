@@ -28,14 +28,15 @@ public class SikorskyAircraftCreationFactory implements AircraftCreationAbstract
     public List<Helicopter> createHelicopter(String sikorskyHelicopterName, int quantity){
         Helicopter helicopter = null;
         List<Helicopter> sikorskyHelicopterOrder = new ArrayList<>();
+
         if (sikorskyHelicopterName.equalsIgnoreCase("Sikorsky R-6")) {
-            for (int i = 0; i < quantity; i++){
+            for (int i = 0; i < quantity; i++) {
                 helicopter = new SikorskyR_6();
                 sikorskyHelicopterOrder.add(helicopter);
             }
         }
         if (sikorskyHelicopterName.equalsIgnoreCase("Sikorsky SH-3")) {
-            for (int i = 0; i < quantity; i++){
+            for (int i = 0; i < quantity; i++) {
                 helicopter = new SikorskySH_3();
                 sikorskyHelicopterOrder.add(helicopter);
             }
